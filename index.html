@@ -1,102 +1,207 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DealFusion - Amazon Deals & Earning Tools</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DealFusion - Best Deals & Tools</title>
 <style>
-body{font-family:Poppins,Arial;background:#f8fafc;margin:0;color:#0f172a}
-header{background:#0ea5e9;color:white;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0}
-nav a{color:white;margin:0 10px;text-decoration:none;font-weight:500}
-.hero{display:flex;align-items:center;justify-content:space-between;padding:60px 40px;background:linear-gradient(135deg,#0ea5e9,#22c55e);color:white}
-.hero h1{font-size:40px;margin-bottom:10px}
-.hero p{max-width:450px}
-.btn{display:inline-block;margin-top:15px;padding:12px 18px;border-radius:10px;background:white;color:#0ea5e9;text-decoration:none;font-weight:600}
-.section{padding:50px 40px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:white;padding:20px;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08);text-align:center}
-.card img{width:100%;height:160px;object-fit:contain}
-.buy{display:inline-block;margin-top:10px;padding:10px 14px;background:#22c55e;color:white;border-radius:10px;text-decoration:none;font-weight:bold}
-.footer{background:#0f172a;color:white;padding:30px;text-align:center;margin-top:40px}
-</style>
+  /* ========== General Reset ========== */
+  * { margin:0; padding:0; box-sizing: border-box; font-family: Arial, sans-serif; }
+  body { background: #f4f4f4; color: #333; line-height: 1.6; }
+  a { text-decoration: none; color: inherit; }
+
+/* ========== Header ========== */
+header { background: #1e40af; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+header h1 { font-size: 1.8rem; }
+nav a { margin-left: 20px; color: white; font-weight: bold; }
+
+/* ========== Hero ========== */
+.hero { background: url('[https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1350&q=80](https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1350&q=80)') no-repeat center/cover; height: 60vh; display: flex; justify-content: center; align-items: center; color: white; text-align: center; }
+.hero h2 { font-size: 3rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); }
+
+/* ========== Section Titles ========== */
+section { padding: 50px 20px; }
+section h2 { text-align: center; margin-bottom: 30px; color: #1e40af; }
+
+/* ========== Deals Section ========== */
+.deals-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.deal-card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+.deal-card img { width: 100%; border-radius: 10px; }
+.deal-card h3 { margin: 10px 0; color: #1e40af; }
+.deal-card p { font-weight: bold; margin-bottom: 10px; }
+.deal-card button { background: #1e40af; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+
+/* ========== Tools Section ========== */
+.tools-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.tool-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.tool-card h3 { margin-bottom: 15px; color: #1e40af; }
+.tool-card input, .tool-card select { width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
+.tool-card button { background: #1e40af; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; width: 100%; }
+
+/* ========== Blog Section ========== */
+.blogs-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.blog-card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.blog-card h3 { color: #1e40af; margin-bottom: 10px; }
+.blog-card p { font-size: 0.9rem; }
+
+/* ========== Footer ========== */
+footer { background: #1e40af; color: white; padding: 20px; text-align: center; }
+
+/* ========== Responsive ========== */
+@media(max-width:768px){ header { flex-direction: column; } nav a { margin: 10px; } } </style>
+
 </head>
 <body>
 
+<!-- Header -->
+
 <header>
-  <h2>DealFusion</h2>
+  <h1>DealFusion</h1>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Deals</a>
-    <a href="#">Tools</a>
-    <a href="#">Blog</a>
-    <a href="#">Contact</a>
+    <a href="#deals">Deals</a>
+    <a href="#tools">Tools</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
+<!-- Hero Section -->
+
 <section class="hero">
-  <div>
-    <h1>Best Amazon Deals & Earning Tools</h1>
-    <p>Discover daily updated deals and online earning calculators.</p>
-    <a class="btn" href="#">Explore Deals</a>
-  </div>
-  <img src="https://via.placeholder.com/400x260" alt="hero">
+  <h2>Best Deals & Online Tools All in One Place!</h2>
 </section>
 
-<section class="section">
-  <h2>Categories</h2>
-  <div class="grid">
-    <div class="card">Online Earning</div>
-    <div class="card">Amazon Deals</div>
-    <div class="card">Mobile Reviews</div>
-    <div class="card">Apps & Tools</div>
-  </div>
-</section>
+<!-- Deals Section -->
 
-<section class="section">
-  <h2>Top Amazon Products</h2>
-  <div class="grid" id="productGrid"></div>
-</section>
-
-<section class="section">
-  <h2>Earning Tools</h2>
-  <div class="grid">
-    <div class="card">YouTube Money Calculator</div>
-    <div class="card">Affiliate Commission Calculator</div>
-    <div class="card">TikTok Earnings Calculator</div>
-    <div class="card">Password Generator</div>
+<section id="deals">
+  <h2>Top Deals</h2>
+  <div class="deals-container">
+    <div class="deal-card">
+      <img src="https://images.unsplash.com/photo-1600180758895-bbd7c84b4315?auto=format&fit=crop&w=500&q=60" alt="Deal 1">
+      <h3>Amazon Echo</h3>
+      <p>$49.99</p>
+      <button>Grab Deal</button>
+    </div>
+    <div class="deal-card">
+      <img src="https://images.unsplash.com/photo-1587202372775-4e6bb8c0f05c?auto=format&fit=crop&w=500&q=60" alt="Deal 2">
+      <h3>Wireless Headphones</h3>
+      <p>$79.99</p>
+      <button>Grab Deal</button>
+    </div>
+    <div class="deal-card">
+      <img src="https://images.unsplash.com/photo-1555617117-08fda7f19c0c?auto=format&fit=crop&w=500&q=60" alt="Deal 3">
+      <h3>Smart Watch</h3>
+      <p>$99.99</p>
+      <button>Grab Deal</button>
+    </div>
   </div>
 </section>
 
-<div class="footer">
-  <p>© 2026 DealFusion - All Rights Reserved</p>
+<!-- Tools Section -->
+
+<section id="tools">
+  <h2>Useful Tools</h2>
+  <div class="tools-container">
+
+```
+<!-- YouTube Earnings Calculator -->
+<div class="tool-card">
+  <h3>YouTube Earnings Calculator</h3>
+  <input type="number" id="ytViews" placeholder="Enter monthly views">
+  <button onclick="calcYT()">Calculate Earnings</button>
+  <p id="ytResult"></p>
 </div>
 
-<script>
-// Array of 50 Amazon products
-const products = [
-  {title:"Wireless Earbuds", img:"https://via.placeholder.com/200x160?text=Earbuds", link:"#"},
-  {title:"Smart Watch", img:"https://via.placeholder.com/200x160?text=Smart+Watch", link:"#"},
-  {title:"Power Bank", img:"https://via.placeholder.com/200x160?text=Power+Bank", link:"#"},
-  {title:"Gaming Keyboard", img:"https://via.placeholder.com/200x160?text=Keyboard", link:"#"},
-  {title:"Bluetooth Speaker", img:"https://via.placeholder.com/200x160?text=Speaker", link:"#"},
-  {title:"Laptop Bag", img:"https://via.placeholder.com/200x160?text=Laptop+Bag", link:"#"},
-  {title:"Fitness Tracker", img:"https://via.placeholder.com/200x160?text=Fitness+Tracker", link:"#"},
-  {title:"Smartphone Holder", img:"https://via.placeholder.com/200x160?text=Holder", link:"#"},
-  {title:"USB Hub", img:"https://via.placeholder.com/200x160?text=USB+Hub", link:"#"},
-  {title:"LED Desk Lamp", img:"https://via.placeholder.com/200x160?text=Desk+Lamp", link:"#"},
-  // Add remaining 40 products similarly...
-];
+<!-- Affiliate Commission Calculator -->
+<div class="tool-card">
+  <h3>Affiliate Commission Calculator</h3>
+  <input type="number" id="saleAmount" placeholder="Enter sale amount">
+  <input type="number" id="commissionRate" placeholder="Commission %">
+  <button onclick="calcAffiliate()">Calculate Commission</button>
+  <p id="affiliateResult"></p>
+</div>
 
-// Render products dynamically
-const grid = document.getElementById('productGrid');
-products.forEach(p=>{
-  const card = document.createElement('div');
-  card.className = 'card';
-  card.innerHTML = <img src="${p.img}"><h4>${p.title}</h4><a class="buy" href="${p.link}" target="_blank">Buy Now</a>;
-  grid.appendChild(card);
-});
+<!-- TikTok Earnings Calculator -->
+<div class="tool-card">
+  <h3>TikTok Earnings Calculator</h3>
+  <input type="number" id="tikViews" placeholder="Enter monthly views">
+  <button onclick="calcTikTok()">Calculate Earnings</button>
+  <p id="tikResult"></p>
+</div>
+
+<!-- Password Generator -->
+<div class="tool-card">
+  <h3>Password Generator</h3>
+  <input type="text" id="passwordOutput" placeholder="Generated password">
+  <button onclick="generatePassword()">Generate Password</button>
+</div>
+```
+
+  </div>
+</section>
+
+<!-- Blog Section -->
+
+<section id="blog">
+  <h2>Latest Blog Posts</h2>
+  <div class="blogs-container">
+    <div class="blog-card">
+      <h3>Top 5 Online Deals This Week</h3>
+      <p>Discover the best discounts and deals available online this week to save big on your shopping.</p>
+    </div>
+    <div class="blog-card">
+      <h3>How to Earn Online with Affiliate Marketing</h3>
+      <p>Step-by-step guide to start earning commissions using affiliate marketing programs easily.</p>
+    </div>
+    <div class="blog-card">
+      <h3>Tips for YouTube Monetization</h3>
+      <p>Learn the secrets of maximizing your YouTube earnings and growing your channel effectively.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+
+<footer id="contact">
+  <p>DealFusion &copy; 2026 | Contact: info@dealfusion.com | Follow us on social media</p>
+</footer>
+
+<script>
+  // YouTube Earnings Calculator (assume $2 per 1000 views)
+  function calcYT(){
+    let views = document.getElementById('ytViews').value;
+    let earnings = (views / 1000) * 2;
+    document.getElementById('ytResult').innerText = 'Estimated Earnings: $' + earnings.toFixed(2);
+  }
+
+  // Affiliate Commission Calculator
+  function calcAffiliate(){
+    let sale = document.getElementById('saleAmount').value;
+    let rate = document.getElementById('commissionRate').value;
+    let commission = (sale * rate)/100;
+    document.getElementById('affiliateResult').innerText = 'Commission: $' + commission.toFixed(2);
+  }
+
+  // TikTok Earnings Calculator (assume $0.01 per view)
+  function calcTikTok(){
+    let views = document.getElementById('tikViews').value;
+    let earnings = views * 0.01;
+    document.getElementById('tikResult').innerText = 'Estimated Earnings: $' + earnings.toFixed(2);
+  }
+
+  // Password Generator
+  function generatePassword(){
+    let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+    let password = "";
+    for(let i=0; i<12; i++){
+      password += charset.charAt(Math.floor(Math.random()*charset.length));
+    }
+    document.getElementById('passwordOutput').value = password;
+  }
 </script>
 
 </body>
 </html>
+
 
