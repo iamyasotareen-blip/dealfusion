@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DealFusion - Premium Deals</title>
+<title>DealFusion - Top 30 Trending Products</title>
 
 <style>
 body{
@@ -12,85 +12,25 @@ body{
     background:#f5f7fa;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero{
     background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
     color:white;
     text-align:center;
     padding:60px 20px;
 }
+.hero h1{font-size:40px;margin:0;}
+.hero p{margin-top:10px;opacity:0.8;}
 
-.hero h1{
-    font-size:40px;
-    margin:0;
+/* PRODUCTS GRID */
+.products{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:40px;
 }
 
-.hero p{
-    margin-top:10px;
-    opacity:0.8;
-}
-
-<section class="products">
-
-<!-- Product 1 -->
-<div class="card">
-    <div class="badge">🔥 Hot Deal</div>
-    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Smartphone">
-    <div class="card-content">
-        <h2>Infinix Hot 40</h2>
-        <p>Powerful budget smartphone with long battery.</p>
-        <a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
-    </div>
-</div>
-
-<!-- Product 2 -->
-<div class="card">
-    <div class="badge">🔥 Hot Deal</div>
-    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad" alt="Wireless Earbuds">
-    <div class="card-content">
-        <h2>Wireless Earbuds</h2>
-        <p>High quality sound with long battery life.</p>
-        <a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
-    </div>
-</div>
-
-<!-- Product 3 -->
-<div class="card">
-    <div class="badge">🔥 Hot Deal</div>
-    <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b" alt="Smart Watch">
-    <div class="card-content">
-        <h2>Smart Watch</h2>
-        <p>Fitness tracking and notifications on your wrist.</p>
-        <a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
-    </div>
-</div>
-
-<!-- Product 4 -->
-<div class="card">
-    <div class="badge">🔥 Hot Deal</div>
-    <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7" alt="Gaming Mouse">
-    <div class="card-content">
-        <h2>Gaming Mouse</h2>
-        <p>High precision mouse for gamers.</p>
-        <a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
-    </div>
-</div>
-
-<!-- Product 5 -->
-<div class="card">
-    <div class="badge">🔥 Hot Deal</div>
-    <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad" alt="Bluetooth Speaker">
-    <div class="card-content">
-        <h2>Bluetooth Speaker</h2>
-        <p>Portable speaker with strong bass and long battery life.</p>
-        <a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
-    </div>
-</div>
-
-</section>
-
-}
-
+/* CARD */
 .card{
     background:white;
     border-radius:20px;
@@ -99,11 +39,7 @@ body{
     transition:0.3s;
     position:relative;
 }
-
-.card:hover{
-    transform:translateY(-8px);
-}
-
+.card:hover{transform:translateY(-8px);}
 .badge{
     position:absolute;
     background:#ff3c3c;
@@ -114,28 +50,17 @@ body{
     top:15px;
     left:15px;
 }
-
 .card img{
     width:100%;
     height:220px;
     object-fit:cover;
 }
-
 .card-content{
     padding:20px;
     text-align:center;
 }
-
-.card h2{
-    margin:10px 0;
-    font-size:20px;
-}
-
-.card p{
-    font-size:14px;
-    color:#555;
-}
-
+.card h2{margin:10px 0;font-size:18px;}
+.card p{font-size:14px;color:#555;}
 .btn{
     display:inline-block;
     margin-top:15px;
@@ -147,10 +72,7 @@ body{
     font-weight:bold;
     transition:0.3s;
 }
-
-.btn:hover{
-    opacity:0.8;
-}
+.btn:hover{opacity:0.8;}
 
 /* FOOTER */
 footer{
@@ -167,41 +89,86 @@ footer{
 }
 </style>
 </head>
+
 <body>
 
 <!-- HERO -->
 <section class="hero">
-    <h1>DealFusion</h1>
-    <p>Best Amazon & Daraz Deals in Pakistan</p>
+<h1>DealFusion</h1>
+<p>Top 30 Trending Products in Pakistan</p>
 </section>
 
 <!-- PRODUCTS -->
 <section class="products">
 
-    <!-- Product -->
-    <div class="card">
-        <div class="badge">🔥 Hot Deal</div>
-        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Smartphone">
-        <div class="card-content">
-            <h2>Infinix Hot 40</h2>
-            <p>Powerful budget smartphone with long battery and smooth performance.</p>
+<!-- 30 Product Cards -->
+<!-- Product 1 -->
+<div class="card">
+<div class="badge">🔥 Hot Deal</div>
+<img src="https://via.placeholder.com/280x220?text=Product+1" alt="Product 1">
+<div class="card-content">
+<h2>Product 1</h2>
+<p>Short description for Product 1.</p>
+<a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
+</div>
+</div>
 
-            <!-- YOUR AMAZON LINK ADDED HERE -->
-            <a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">
-                Buy on Amazon
-            </a>
+<!-- Product 2 -->
+<div class="card">
+<div class="badge">🔥 Hot Deal</div>
+<img src="https://via.placeholder.com/280x220?text=Product+2" alt="Product 2">
+<div class="card-content">
+<h2>Product 2</h2>
+<p>Short description for Product 2.</p>
+<a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
+</div>
+</div>
 
-        </div>
-    </div>
+<!-- Product 3 -->
+<div class="card">
+<div class="badge">🔥 Hot Deal</div>
+<img src="https://via.placeholder.com/280x220?text=Product+3" alt="Product 3">
+<div class="card-content">
+<h2>Product 3</h2>
+<p>Short description for Product 3.</p>
+<a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
+</div>
+</div>
+
+<!-- Product 4 -->
+<div class="card">
+<div class="badge">🔥 Hot Deal</div>
+<img src="https://via.placeholder.com/280x220?text=Product+4" alt="Product 4">
+<div class="card-content">
+<h2>Product 4</h2>
+<p>Short description for Product 4.</p>
+<a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
+</div>
+</div>
+
+<!-- Product 5 -->
+<div class="card">
+<div class="badge">🔥 Hot Deal</div>
+<img src="https://via.placeholder.com/280x220?text=Product+5" alt="Product 5">
+<div class="card-content">
+<h2>Product 5</h2>
+<p>Short description for Product 5.</p>
+<a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
+</div>
+</div>
+
+<!-- Copy the above structure and replace product number, image & description for Products 6 to 30 -->
+<!-- You can easily duplicate the div.card 25 more times -->
 
 </section>
 
 <footer>
-    © 2026 DealFusion | Pakistan
-    <div class="disclaimer">
-        Disclosure: As an Amazon Associate, we earn from qualifying purchases.
-    </div>
+© 2026 DealFusion | Pakistan
+<div class="disclaimer">
+Disclosure: As an Amazon Associate, we earn from qualifying purchases.
+</div>
 </footer>
 
 </body>
 </html>
+
