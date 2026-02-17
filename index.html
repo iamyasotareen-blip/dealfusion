@@ -3,121 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DealFusion - Best Deals in Pakistan</title>
+<title>DealFusion - Premium Deals</title>
+
 <style>
-body { font-family: Arial; margin: 0; background: #f4f4f4; }
-header { background: #111; color: white; text-align: center; padding: 20px; }
-main { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
-.product { background: white; margin: 15px; padding: 15px; border-radius: 10px; width: 250px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-.product img { width: 100%; border-radius: 8px; }
-button { background: #ff6600; color: white; padding: 10px; margin: 5px 0; border: none; border-radius: 5px; cursor: pointer; }
-button:hover { background: #e65c00; }
-footer { text-align: center; padding: 15px; background: #111; color: white; margin-top: 20px; }
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#f5f7fa;
+}
+
+/* HERO */
+.hero{
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+    margin:0;
+}
+
+.hero p{
+    margin-top:10px;
+    opacity:0.8;
+}
+
+/* PRODUCTS */
+.products{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:40px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition:0.3s;
+    position:relative;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.badge{
+    position:absolute;
+    background:#ff3c3c;
+    color:white;
+    padding:5px 10px;
+    font-size:12px;
+    border-radius:20px;
+    top:15px;
+    left:15px;
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+    text-align:center;
+}
+
+.card h2{
+    margin:10px 0;
+    font-size:20px;
+}
+
+.card p{
+    font-size:14px;
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:linear-gradient(135deg,#ff6600,#ff9900);
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    opacity:0.8;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+}
+.disclaimer{
+    margin-top:10px;
+    font-size:12px;
+    opacity:0.7;
+}
 </style>
 </head>
 <body>
 
-<header>
-<h1>DealFusion</h1>
-<p>Best Amazon & Daraz Deals in Pakistan</p>
-</header>
-
-<main>
-
-<!-- Product 1 -->
-<section class="product">
-<h2>Infinix Hot 40</h2>
-<img src="https://via.placeholder.com/250x250?text=Infinix+Hot+40" alt="Infinix Hot 40">
-<p>Budget gaming phone with strong battery.</p>
-<a href="https://www.daraz.pk/products/infinix-hot-40?aff=12345" target="_blank"><button>Buy on Daraz</button></a>
-<a href="https://www.amazon.com/dp/B09XYZ?tag=12345" target="_blank"><button>Buy on Amazon</button></a>
+<!-- HERO -->
+<section class="hero">
+    <h1>DealFusion</h1>
+    <p>Best Amazon & Daraz Deals in Pakistan</p>
 </section>
 
-<!-- Product 2 -->
-<section class="product">
-<h2>Wireless Earbuds</h2>
-<img src="https://via.placeholder.com/250x250?text=Wireless+Earbuds" alt="Wireless Earbuds">
-<p>High quality sound with long battery life.</p>
-<a href="https://www.daraz.pk/products/wireless-earbuds?aff=12345" target="_blank"><button>Buy on Daraz</button></a>
-<a href="https://www.amazon.com/dp/B08ABC?tag=12345" target="_blank"><button>Buy on Amazon</button></a>
-</section>
+<!-- PRODUCTS -->
+<section class="products">
 
-<!-- Product 3 -->
-<section class="product">
-<h2>Smart Watch</h2>
-<img src="https://via.placeholder.com/250x250?text=Smart+Watch" alt="Smart Watch">
-<p>Fitness and notifications on your wrist.</p>
-<a href="https://www.daraz.pk/products/smart-watch?aff=12345" target="_blank"><button>Buy on Daraz</button></a>
-<a href="https://www.amazon.com/dp/B07XYZ?tag=12345" target="_blank"><button>Buy on Amazon</button></a>
-</section>
+    <!-- Product -->
+    <div class="card">
+        <div class="badge">🔥 Hot Deal</div>
+        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9" alt="Smartphone">
+        <div class="card-content">
+            <h2>Infinix Hot 40</h2>
+            <p>Powerful budget smartphone with long battery and smooth performance.</p>
 
-<!-- Product 4 -->
-<section class="product">
-<h2>Bluetooth Speaker</h2>
-<img src="https://via.placeholder.com/250x250?text=Bluetooth+Speaker" alt="Bluetooth Speaker">
-<p>Portable speaker with strong bass.</p>
-<a href="https://www.daraz.pk/products/bluetooth-speaker?aff=12345" target="_blank"><button>Buy on Daraz</button></a>
-<a href="https://www.amazon.com/dp/B07ABC?tag=12345" target="_blank"><button>Buy on Amazon</button></a>
-</section>
+            <!-- YOUR AMAZON LINK ADDED HERE -->
+            <a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">
+                Buy on Amazon
+            </a>
 
-<!-- Product 5 -->
-<section class="product">
-<h2>Gaming Mouse</h2>
-<img src="https://via.placeholder.com/250x250?text=Gaming+Mouse" alt="Gaming Mouse">
-<p>High precision mouse for gamers.</p>
-<a href="https://www.daraz.pk/products/gaming-mouse?aff=12345" target="_blank"><button>Buy on Daraz</button></a>
-<a href="https://www.amazon.com/dp/B07DEF?tag=12345" target="_blank"><button>Buy on Amazon</button></a>
-</section>
+        </div>
+    </div>
 
-<!-- Product 6 -->
-<section class="product">
-<h2>Laptop Backpack</h2>
-<img src="https://via.placeholder.com/250x250?text=Laptop+Backpack" alt="Laptop Backpack">
-<p>Durable backpack for laptops and gadgets.</p>
-<a href="https://www.daraz.pk/products/laptop-backpack?aff=12345" target="_blank"><button>Buy on Daraz</button></a>
-<a href="https://www.amazon.com/dp/B07GHI?tag=12345" target="_blank"><button>Buy on Amazon</button></a>
 </section>
-
-<!-- Product 7 -->
-<section class="product">
-<h2>LED Desk Lamp</h2>
-<img src="https://via.placeholder.com/250x250?text=LED+Desk+Lamp" alt="LED Desk Lamp">
-<p>Adjustable brightness with USB charging.</p>
-<a href="https://www.daraz.pk/products/led-desk-lamp?aff=12345" target="_blank"><button>Buy on Daraz</button></a>
-<a href="https://www.amazon.com/dp/B07JKL?tag=12345" target="_blank"><button>Buy on Amazon</button></a>
-</section>
-
-<!-- Product 8 -->
-<section class="product">
-<h2>External Hard Drive</h2>
-<img src="https://via.placeholder.com/250x250?text=External+Hard+Drive" alt="External Hard Drive">
-<p>Portable storage for files and backups.</p>
-<a href="https://www.daraz.pk/products/external-hard-drive?aff=12345" target="_blank"><button>Buy on Daraz</button></a>
-<a href="https://www.amazon.com/dp/B07MNO?tag=12345" target="_blank"><button>Buy on Amazon</button></a>
-</section>
-
-<!-- Product 9 -->
-<section class="product">
-<h2>Wireless Keyboard</h2>
-<img src="https://via.placeholder.com/250x250?text=Wireless+Keyboard" alt="Wireless Keyboard">
-<p>Ergonomic and silent typing experience.</p>
-<a href="https://www.daraz.pk/products/wireless-keyboard?aff=12345" target="_blank"><button>Buy on Daraz</button></a>
-<a href="https://www.amazon.com/dp/B07PQR?tag=12345" target="_blank"><button>Buy on Amazon</button></a>
-</section>
-
-<!-- Product 10 -->
-<section class="product">
-<h2>HD Webcam</h2>
-<img src="https://via.placeholder.com/250x250?text=HD+Webcam" alt="HD Webcam">
-<p>High-quality video for streaming and calls.</p>
-<a href="https://www.daraz.pk/products/hd-webcam?aff=12345" target="_blank"><button>Buy on Daraz</button></a>
-<a href="https://www.amazon.com/dp/B07STU?tag=12345" target="_blank"><button>Buy on Amazon</button></a>
-</section>
-
-</main>
 
 <footer>
-<p>&copy; 2026 DealFusion | Pakistan</p>
+    © 2026 DealFusion | Pakistan
+    <div class="disclaimer">
+        Disclosure: As an Amazon Associate, we earn from qualifying purchases.
+    </div>
 </footer>
 
 </body>
