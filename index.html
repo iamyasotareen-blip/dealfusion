@@ -1,173 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DealFusion - Top 30 Trending Products</title>
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DealFusion - Amazon Deals & Earning Tools</title>
 <style>
-body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#f5f7fa;
-}
-
-/* HERO SECTION */
-.hero{
-    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-}
-.hero h1{font-size:40px;margin:0;}
-.hero p{margin-top:10px;opacity:0.8;}
-
-/* PRODUCTS GRID */
-.products{
-    display:grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    padding:40px;
-}
-
-/* CARD */
-.card{
-    background:white;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
-    transition:0.3s;
-    position:relative;
-}
-.card:hover{transform:translateY(-8px);}
-.badge{
-    position:absolute;
-    background:#ff3c3c;
-    color:white;
-    padding:5px 10px;
-    font-size:12px;
-    border-radius:20px;
-    top:15px;
-    left:15px;
-}
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-.card-content{
-    padding:20px;
-    text-align:center;
-}
-.card h2{margin:10px 0;font-size:18px;}
-.card p{font-size:14px;color:#555;}
-.btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:10px 20px;
-    background:linear-gradient(135deg,#ff6600,#ff9900);
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-    transition:0.3s;
-}
-.btn:hover{opacity:0.8;}
-
-/* FOOTER */
-footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:20px;
-    font-size:14px;
-}
-.disclaimer{
-    margin-top:10px;
-    font-size:12px;
-    opacity:0.7;
-}
+body{font-family:Poppins,Arial;background:#f8fafc;margin:0;color:#0f172a}
+header{background:#0ea5e9;color:white;padding:15px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0}
+nav a{color:white;margin:0 10px;text-decoration:none;font-weight:500}
+.hero{display:flex;align-items:center;justify-content:space-between;padding:60px 40px;background:linear-gradient(135deg,#0ea5e9,#22c55e);color:white}
+.hero h1{font-size:40px;margin-bottom:10px}
+.hero p{max-width:450px}
+.btn{display:inline-block;margin-top:15px;padding:12px 18px;border-radius:10px;background:white;color:#0ea5e9;text-decoration:none;font-weight:600}
+.section{padding:50px 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;padding:20px;border-radius:16px;box-shadow:0 8px 20px rgba(0,0,0,.08);text-align:center}
+.card img{width:100%;height:160px;object-fit:contain}
+.buy{display:inline-block;margin-top:10px;padding:10px 14px;background:#22c55e;color:white;border-radius:10px;text-decoration:none;font-weight:bold}
+.footer{background:#0f172a;color:white;padding:30px;text-align:center;margin-top:40px}
 </style>
 </head>
-
 <body>
 
-<!-- HERO -->
+<header>
+  <h2>DealFusion</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Deals</a>
+    <a href="#">Tools</a>
+    <a href="#">Blog</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
 <section class="hero">
-<h1>DealFusion</h1>
-<p>Top 30 Trending Products in Pakistan</p>
+  <div>
+    <h1>Best Amazon Deals & Earning Tools</h1>
+    <p>Discover daily updated deals and online earning calculators.</p>
+    <a class="btn" href="#">Explore Deals</a>
+  </div>
+  <img src="https://via.placeholder.com/400x260" alt="hero">
 </section>
 
-<!-- PRODUCTS -->
-<section class="products">
-
-<!-- 30 Product Cards -->
-<!-- Product 1 -->
-<div class="card">
-<div class="badge">🔥 Hot Deal</div>
-<img src="https://via.placeholder.com/280x220?text=Product+1" alt="Product 1">
-<div class="card-content">
-<h2>Product 1</h2>
-<p>Short description for Product 1.</p>
-<a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
-</div>
-</div>
-
-<!-- Product 2 -->
-<div class="card">
-<div class="badge">🔥 Hot Deal</div>
-<img src="https://via.placeholder.com/280x220?text=Product+2" alt="Product 2">
-<div class="card-content">
-<h2>Product 2</h2>
-<p>Short description for Product 2.</p>
-<a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
-</div>
-</div>
-
-<!-- Product 3 -->
-<div class="card">
-<div class="badge">🔥 Hot Deal</div>
-<img src="https://via.placeholder.com/280x220?text=Product+3" alt="Product 3">
-<div class="card-content">
-<h2>Product 3</h2>
-<p>Short description for Product 3.</p>
-<a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
-</div>
-</div>
-
-<!-- Product 4 -->
-<div class="card">
-<div class="badge">🔥 Hot Deal</div>
-<img src="https://via.placeholder.com/280x220?text=Product+4" alt="Product 4">
-<div class="card-content">
-<h2>Product 4</h2>
-<p>Short description for Product 4.</p>
-<a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
-</div>
-</div>
-
-<!-- Product 5 -->
-<div class="card">
-<div class="badge">🔥 Hot Deal</div>
-<img src="https://via.placeholder.com/280x220?text=Product+5" alt="Product 5">
-<div class="card-content">
-<h2>Product 5</h2>
-<p>Short description for Product 5.</p>
-<a href="https://amzn.to/3ZE43GH" target="_blank" class="btn">Buy on Amazon</a>
-</div>
-</div>
-
-<!-- Copy the above structure and replace product number, image & description for Products 6 to 30 -->
-<!-- You can easily duplicate the div.card 25 more times -->
-
+<section class="section">
+  <h2>Categories</h2>
+  <div class="grid">
+    <div class="card">Online Earning</div>
+    <div class="card">Amazon Deals</div>
+    <div class="card">Mobile Reviews</div>
+    <div class="card">Apps & Tools</div>
+  </div>
 </section>
 
-<footer>
-© 2026 DealFusion | Pakistan
-<div class="disclaimer">
-Disclosure: As an Amazon Associate, we earn from qualifying purchases.
+<section class="section">
+  <h2>Top Amazon Products</h2>
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<section class="section">
+  <h2>Earning Tools</h2>
+  <div class="grid">
+    <div class="card">YouTube Money Calculator</div>
+    <div class="card">Affiliate Commission Calculator</div>
+    <div class="card">TikTok Earnings Calculator</div>
+    <div class="card">Password Generator</div>
+  </div>
+</section>
+
+<div class="footer">
+  <p>© 2026 DealFusion - All Rights Reserved</p>
 </div>
-</footer>
+
+<script>
+// Array of 50 Amazon products
+const products = [
+  {title:"Wireless Earbuds", img:"https://via.placeholder.com/200x160?text=Earbuds", link:"#"},
+  {title:"Smart Watch", img:"https://via.placeholder.com/200x160?text=Smart+Watch", link:"#"},
+  {title:"Power Bank", img:"https://via.placeholder.com/200x160?text=Power+Bank", link:"#"},
+  {title:"Gaming Keyboard", img:"https://via.placeholder.com/200x160?text=Keyboard", link:"#"},
+  {title:"Bluetooth Speaker", img:"https://via.placeholder.com/200x160?text=Speaker", link:"#"},
+  {title:"Laptop Bag", img:"https://via.placeholder.com/200x160?text=Laptop+Bag", link:"#"},
+  {title:"Fitness Tracker", img:"https://via.placeholder.com/200x160?text=Fitness+Tracker", link:"#"},
+  {title:"Smartphone Holder", img:"https://via.placeholder.com/200x160?text=Holder", link:"#"},
+  {title:"USB Hub", img:"https://via.placeholder.com/200x160?text=USB+Hub", link:"#"},
+  {title:"LED Desk Lamp", img:"https://via.placeholder.com/200x160?text=Desk+Lamp", link:"#"},
+  // Add remaining 40 products similarly...
+];
+
+// Render products dynamically
+const grid = document.getElementById('productGrid');
+products.forEach(p=>{
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = <img src="${p.img}"><h4>${p.title}</h4><a class="buy" href="${p.link}" target="_blank">Buy Now</a>;
+  grid.appendChild(card);
+});
+</script>
 
 </body>
 </html>
