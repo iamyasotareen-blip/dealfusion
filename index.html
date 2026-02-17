@@ -6,55 +6,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DealFusion - Best Deals & Tools</title>
 <style>
-  /* ========== General Reset ========== */
-  * { margin:0; padding:0; box-sizing: border-box; font-family: Arial, sans-serif; }
-  body { background: #f4f4f4; color: #333; line-height: 1.6; }
-  a { text-decoration: none; color: inherit; }
+  * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+  body { background:#f4f4f4; color:#333; line-height:1.6; }
+  a { text-decoration:none; color:inherit; }
 
-/* ========== Header ========== */
-header { background: #1e40af; color: white; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
-header h1 { font-size: 1.8rem; }
-nav a { margin-left: 20px; color: white; font-weight: bold; }
+header { background:#1e40af; color:white; padding:15px 20px; display:flex; justify-content:space-between; align-items:center; }
+header h1 { font-size:1.8rem; }
+nav a { margin-left:20px; color:white; font-weight:bold; }
 
-/* ========== Hero ========== */
-.hero { background: url('[https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1350&q=80](https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1350&q=80)') no-repeat center/cover; height: 60vh; display: flex; justify-content: center; align-items: center; color: white; text-align: center; }
-.hero h2 { font-size: 3rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.7); }
+.hero { background:url('[https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1350&q=80](https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1350&q=80)') no-repeat center/cover; height:60vh; display:flex; justify-content:center; align-items:center; color:white; text-align:center; }
+.hero h2 { font-size:3rem; text-shadow:2px 2px 5px rgba(0,0,0,0.7); }
 
-/* ========== Section Titles ========== */
-section { padding: 50px 20px; }
-section h2 { text-align: center; margin-bottom: 30px; color: #1e40af; }
+section { padding:50px 20px; }
+section h2 { text-align:center; margin-bottom:30px; color:#1e40af; }
 
-/* ========== Deals Section ========== */
-.deals-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-.deal-card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
-.deal-card img { width: 100%; border-radius: 10px; }
-.deal-card h3 { margin: 10px 0; color: #1e40af; }
-.deal-card p { font-weight: bold; margin-bottom: 10px; }
-.deal-card button { background: #1e40af; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+.deals-container { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
+.deal-card { background:white; padding:15px; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.15); text-align:center; transition: transform 0.3s, box-shadow 0.3s; }
+.deal-card:hover { transform: translateY(-5px); box-shadow:0 8px 15px rgba(0,0,0,0.3); }
+.deal-card img { width:100%; border-radius:10px; }
+.deal-card h3 { margin:10px 0; color:#1e40af; }
+.deal-card p { font-weight:bold; margin-bottom:10px; }
+.deal-card button { background:#f59e0b; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; transition: background 0.3s; }
+.deal-card button:hover { background:#d97706; }
 
-/* ========== Tools Section ========== */
-.tools-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-.tool-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-.tool-card h3 { margin-bottom: 15px; color: #1e40af; }
-.tool-card input, .tool-card select { width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc; }
-.tool-card button { background: #1e40af; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; width: 100%; }
+.tools-container { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
+.tool-card { background:white; padding:20px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+.tool-card h3 { margin-bottom:15px; color:#1e40af; }
+.tool-card input, .tool-card select { width:100%; padding:8px; margin-bottom:10px; border-radius:5px; border:1px solid #ccc; }
+.tool-card button { background:#1e40af; color:white; padding:10px 15px; border:none; border-radius:5px; cursor:pointer; width:100%; }
 
-/* ========== Blog Section ========== */
-.blogs-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-.blog-card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-.blog-card h3 { color: #1e40af; margin-bottom: 10px; }
-.blog-card p { font-size: 0.9rem; }
+.blogs-container { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
+.blog-card { background:white; padding:15px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+.blog-card h3 { color:#1e40af; margin-bottom:10px; }
+.blog-card p { font-size:0.9rem; }
 
-/* ========== Footer ========== */
-footer { background: #1e40af; color: white; padding: 20px; text-align: center; }
+footer { background:#1e40af; color:white; padding:20px; text-align:center; }
 
-/* ========== Responsive ========== */
-@media(max-width:768px){ header { flex-direction: column; } nav a { margin: 10px; } } </style>
+@media(max-width:768px){ header { flex-direction:column; } nav a { margin:10px; } } </style>
 
 </head>
 <body>
-
-<!-- Header -->
 
 <header>
   <h1>DealFusion</h1>
@@ -66,54 +57,28 @@ footer { background: #1e40af; color: white; padding: 20px; text-align: center; }
   </nav>
 </header>
 
-<!-- Hero Section -->
-
 <section class="hero">
   <h2>Best Deals & Online Tools All in One Place!</h2>
 </section>
 
-<!-- Deals Section -->
-
 <section id="deals">
   <h2>Top Deals</h2>
-  <div class="deals-container">
-    <div class="deal-card">
-      <img src="https://images.unsplash.com/photo-1600180758895-bbd7c84b4315?auto=format&fit=crop&w=500&q=60" alt="Deal 1">
-      <h3>Amazon Echo</h3>
-      <p>$49.99</p>
-      <button>Grab Deal</button>
-    </div>
-    <div class="deal-card">
-      <img src="https://images.unsplash.com/photo-1587202372775-4e6bb8c0f05c?auto=format&fit=crop&w=500&q=60" alt="Deal 2">
-      <h3>Wireless Headphones</h3>
-      <p>$79.99</p>
-      <button>Grab Deal</button>
-    </div>
-    <div class="deal-card">
-      <img src="https://images.unsplash.com/photo-1555617117-08fda7f19c0c?auto=format&fit=crop&w=500&q=60" alt="Deal 3">
-      <h3>Smart Watch</h3>
-      <p>$99.99</p>
-      <button>Grab Deal</button>
-    </div>
+  <div class="deals-container" id="dealsContainer">
+    <!-- Deals will be dynamically added here -->
   </div>
 </section>
-
-<!-- Tools Section -->
 
 <section id="tools">
   <h2>Useful Tools</h2>
   <div class="tools-container">
+    <div class="tool-card">
+      <h3>YouTube Earnings Calculator</h3>
+      <input type="number" id="ytViews" placeholder="Enter monthly views">
+      <button onclick="calcYT()">Calculate Earnings</button>
+      <p id="ytResult"></p>
+    </div>
 
 ```
-<!-- YouTube Earnings Calculator -->
-<div class="tool-card">
-  <h3>YouTube Earnings Calculator</h3>
-  <input type="number" id="ytViews" placeholder="Enter monthly views">
-  <button onclick="calcYT()">Calculate Earnings</button>
-  <p id="ytResult"></p>
-</div>
-
-<!-- Affiliate Commission Calculator -->
 <div class="tool-card">
   <h3>Affiliate Commission Calculator</h3>
   <input type="number" id="saleAmount" placeholder="Enter sale amount">
@@ -122,7 +87,6 @@ footer { background: #1e40af; color: white; padding: 20px; text-align: center; }
   <p id="affiliateResult"></p>
 </div>
 
-<!-- TikTok Earnings Calculator -->
 <div class="tool-card">
   <h3>TikTok Earnings Calculator</h3>
   <input type="number" id="tikViews" placeholder="Enter monthly views">
@@ -130,7 +94,6 @@ footer { background: #1e40af; color: white; padding: 20px; text-align: center; }
   <p id="tikResult"></p>
 </div>
 
-<!-- Password Generator -->
 <div class="tool-card">
   <h3>Password Generator</h3>
   <input type="text" id="passwordOutput" placeholder="Generated password">
@@ -140,8 +103,6 @@ footer { background: #1e40af; color: white; padding: 20px; text-align: center; }
 
   </div>
 </section>
-
-<!-- Blog Section -->
 
 <section id="blog">
   <h2>Latest Blog Posts</h2>
@@ -161,40 +122,55 @@ footer { background: #1e40af; color: white; padding: 20px; text-align: center; }
   </div>
 </section>
 
-<!-- Footer -->
-
 <footer id="contact">
   <p>DealFusion &copy; 2026 | Contact: info@dealfusion.com | Follow us on social media</p>
 </footer>
 
 <script>
-  // YouTube Earnings Calculator (assume $2 per 1000 views)
+  const products = [
+    {name:'Amazon Echo', price:'$49.99', img:'https://images.unsplash.com/photo-1600180758895-bbd7c84b4315?auto=format&fit=crop&w=500&q=60', link:'https://www.amazon.com/dp/B085M66LH1'},
+    {name:'Wireless Headphones', price:'$79.99', img:'https://images.unsplash.com/photo-1587202372775-4e6bb8c0f05c?auto=format&fit=crop&w=500&q=60', link:'https://www.amazon.com/dp/B07XJ8C8F5'},
+    {name:'Smart Watch', price:'$99.99', img:'https://images.unsplash.com/photo-1555617117-08fda7f19c0c?auto=format&fit=crop&w=500&q=60', link:'https://www.amazon.com/dp/B07RZ2Z8HV'},
+    {name:'Bluetooth Speaker', price:'$39.99', img:'https://images.unsplash.com/photo-1599945730138-f099174152f3?auto=format&fit=crop&w=500&q=60', link:'https://www.amazon.com/dp/B07ZZWZG4H'},
+    {name:'Laptop Backpack', price:'$59.99', img:'https://images.unsplash.com/photo-1563306406-15c476a6c7fa?auto=format&fit=crop&w=500&q=60', link:'https://www.amazon.com/dp/B082RRCN97'},
+    {name:'Gaming Mouse', price:'$29.99', img:'https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=500&q=60', link:'https://www.amazon.com/dp/B07FPM39S3'},
+    {name:'LED Desk Lamp', price:'$24.99', img:'https://images.unsplash.com/photo-1581091870620-35e83d62b9dc?auto=format&fit=crop&w=500&q=60', link:'https://www.amazon.com/dp/B08BF68W5T'},
+    {name:'External Hard Drive', price:'$89.99', img:'https://images.unsplash.com/photo-1591696331119-ec803fe8c8e6?auto=format&fit=crop&w=500&q=60', link:'https://www.amazon.com/dp/B07VJYZFZV'},
+    {name:'Fitness Tracker', price:'$49.99', img:'https://images.unsplash.com/photo-1601050690276-1d8e43c02eb1?auto=format&fit=crop&w=500&q=60', link:'https://www.amazon.com/dp/B07TYQ4FZ3'},
+    {name:'Portable Charger', price:'$34.99', img:'https://images.unsplash.com/photo-1580910051074-0d19bdbb6e7c?auto=format&fit=crop&w=500&q=60', link:'https://www.amazon.com/dp/B08D6XZ2ZG'}
+  ];
+
+  const dealsContainer = document.getElementById('dealsContainer');
+  products.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'deal-card';
+    card.innerHTML = `<img src='${p.img}' alt='${p.name}'><h3>${p.name}</h3><p>${p.price}</p><button onclick="window.open('${p.link}','_blank')">Buy Now</button>`;
+    dealsContainer.appendChild(card);
+  });
+
   function calcYT(){
     let views = document.getElementById('ytViews').value;
-    let earnings = (views / 1000) * 2;
-    document.getElementById('ytResult').innerText = 'Estimated Earnings: $' + earnings.toFixed(2);
+    let earnings = (views/1000)*2;
+    document.getElementById('ytResult').innerText = 'Estimated Earnings: $'+earnings.toFixed(2);
   }
 
-  // Affiliate Commission Calculator
   function calcAffiliate(){
     let sale = document.getElementById('saleAmount').value;
     let rate = document.getElementById('commissionRate').value;
-    let commission = (sale * rate)/100;
-    document.getElementById('affiliateResult').innerText = 'Commission: $' + commission.toFixed(2);
+    let commission = (sale*rate)/100;
+    document.getElementById('affiliateResult').innerText = 'Commission: $'+commission.toFixed(2);
   }
 
-  // TikTok Earnings Calculator (assume $0.01 per view)
   function calcTikTok(){
     let views = document.getElementById('tikViews').value;
-    let earnings = views * 0.01;
-    document.getElementById('tikResult').innerText = 'Estimated Earnings: $' + earnings.toFixed(2);
+    let earnings = views*0.01;
+    document.getElementById('tikResult').innerText = 'Estimated Earnings: $'+earnings.toFixed(2);
   }
 
-  // Password Generator
   function generatePassword(){
     let charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
     let password = "";
-    for(let i=0; i<12; i++){
+    for(let i=0;i<12;i++){
       password += charset.charAt(Math.floor(Math.random()*charset.length));
     }
     document.getElementById('passwordOutput').value = password;
