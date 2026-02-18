@@ -4,53 +4,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Best Amazon deals, AI tools, earning calculators and online money tools. Earn with Amazon Affiliate and AdSense.">
-<meta name="keywords" content="Amazon deals, affiliate marketing, AI tools, online earning, YouTube calculator">
-<meta name="author" content="DealFusion">
-<title>DealFusion - Complete Earning Platform</title>
+<title>DealFusion Global - Earn Worldwide</title>
+<meta name="description" content="Global Amazon Affiliate + AdSense Earning Website">
 
-<!-- Google AdSense (REPLACE WITH YOUR REAL ID AFTER APPROVAL) -->
+<!-- ✅ REPLACE WITH YOUR REAL ADSENSE ID -->
 
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX" crossorigin="anonymous"></script>
-
-<!-- Google Analytics (REPLACE GA_ID) -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=GA_ID"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);} 
-gtag('js', new Date());
-gtag('config', 'GA_ID');
-</script>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#f1f5f9;color:#0f172a}
-header{background:linear-gradient(90deg,#0f172a,#1e3a8a);color:#fff;padding:15px 30px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+body{background:#f8fafc;color:#0f172a}
+header{background:#0f172a;color:#fff;padding:15px 30px;display:flex;justify-content:space-between;align-items:center}
 header h1{font-size:22px}
-nav a{color:#fff;margin-left:15px;font-weight:500}
-.hero{height:60vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=80') center/cover;display:flex;justify-content:center;align-items:center;text-align:center;color:#fff;padding:20px}
-.hero h2{font-size:38px}
+.hero{height:60vh;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1400&q=80') center/cover;display:flex;justify-content:center;align-items:center;text-align:center;color:#fff}
+.hero h2{font-size:36px}
 section{padding:60px 30px}
-section h2{text-align:center;margin-bottom:40px;color:#1e3a8a;font-size:28px}
+section h2{text-align:center;margin-bottom:40px;color:#1e3a8a}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
 .card{background:#fff;padding:20px;border-radius:15px;box-shadow:0 10px 25px rgba(0,0,0,.08);transition:.3s}
 .card:hover{transform:translateY(-6px)}
 .card img{width:100%;height:200px;object-fit:cover;border-radius:10px}
 .card h3{margin:15px 0;color:#1e3a8a}
 .card p{font-weight:600;margin-bottom:10px}
-.btn{display:inline-block;padding:10px 18px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
-.buy{background:#f59e0b;color:#fff;width:100%}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;border:none;cursor:pointer;font-weight:600;width:100%}
+.buy{background:#f59e0b;color:#fff}
 .buy:hover{background:#d97706}
-.tool-card input,.tool-card textarea{width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #cbd5e1}
-.tool-card button{background:#2563eb;color:#fff;width:100%}
-.tool-card button:hover{background:#1e40af}
-.share-btn{background:#25D366;color:#fff;margin-top:10px;width:100%}
-.share-btn:hover{background:#1ebe5d}
-.popup{position:fixed;bottom:20px;right:20px;background:#1e3a8a;color:#fff;padding:15px 20px;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.3);display:none}
+.tool input{width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #cbd5e1}
+.tool button{background:#2563eb;color:#fff}
+.tool button:hover{background:#1e40af}
 footer{background:#0f172a;color:#fff;text-align:center;padding:20px;margin-top:40px}
 .small{font-size:12px;color:#94a3b8;margin-top:10px}
 </style>
@@ -59,101 +42,104 @@ footer{background:#0f172a;color:#fff;text-align:center;padding:20px;margin-top:4
 <body>
 
 <header>
-<h1>DealFusion</h1>
-<nav>
-<a href="#deals">Deals</a>
-<a href="#tools">Tools</a>
-</nav>
+<h1>DealFusion Global</h1>
 </header>
 
 <div class="hero">
-<h2>Earn Online with Amazon + AI Tools</h2>
+<h2>Worldwide Affiliate Earning Platform</h2>
 </div>
 
-<section id="deals">
-<h2>Top Amazon Affiliate Products</h2>
+<section>
+<h2>Top Trending Products</h2>
 <div class="grid" id="productGrid"></div>
 </section>
 
-<section id="tools">
-<h2>AI & Earning Tools</h2>
+<section>
+<h2>Earning Tools</h2>
 <div class="grid">
 
-<div class="card tool-card">
+<div class="card tool">
 <h3>YouTube Earnings Calculator</h3>
-<input type="number" id="ytViews" placeholder="Monthly Views">
+<input type="number" id="views" placeholder="Monthly Views">
 <button class="btn" onclick="calcYT()">Calculate</button>
 <p id="ytResult"></p>
-<button class="btn share-btn" onclick="sharePage()">Share on WhatsApp</button>
 </div>
 
-<div class="card tool-card">
+<div class="card tool">
 <h3>Affiliate Commission Calculator</h3>
 <input type="number" id="sale" placeholder="Sale Amount">
 <input type="number" id="rate" placeholder="Commission %">
-<button class="btn" onclick="calcAffiliate()">Calculate</button>
+<button class="btn" onclick="calcCommission()">Calculate</button>
 <p id="affResult"></p>
-</div>
-
-<div class="card tool-card">
-<h3>Password Generator</h3>
-<input type="text" id="passOut" placeholder="Generated Password">
-<button class="btn" onclick="genPass()">Generate</button>
-</div>
-
-<div class="card tool-card">
-<h3>AI Text Generator (Demo)</h3>
-<textarea id="aiInput" placeholder="Type topic..."></textarea>
-<button class="btn" onclick="generateAIText()">Generate</button>
-<p id="aiOutput"></p>
 </div>
 
 </div>
 </section>
 
-<div class="popup" id="trafficPopup">🔥 Share this site & start earning today!</div>
-
 <footer>
-DealFusion © 2026 | Amazon Associate + Google AdSense Monetized
-<div class="small">Disclaimer: As an Amazon Associate, we earn from qualifying purchases.</div>
+DealFusion © 2026 | Global Affiliate + AdSense Ready
+<div class="small">Replace Affiliate Tag & AdSense ID Before Use</div>
 </footer>
 
 <script>
-const affiliateTag="YOUR_AFFILIATE_TAG"; // MUST REPLACE
 
-const products=[
-{name:'MacBook Air',price:'$999',img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',asin:'B08N5WRWNW'},
-{name:'Gaming Laptop',price:'$1199',img:'https://images.unsplash.com/photo-1587202372775-9891a3d6f26a?auto=format&fit=crop&w=800&q=80',asin:'B09JQN9P7K'},
-{name:'Headphones',price:'$199',img:'https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?auto=format&fit=crop&w=800&q=80',asin:'B07XJ8C8F5'},
-{name:'Smart Watch',price:'$149',img:'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=800&q=80',asin:'B07RZ2Z8HV'},
-{name:'Bluetooth Speaker',price:'$89',img:'https://images.unsplash.com/photo-1585386959984-a41552231658?auto=format&fit=crop&w=800&q=80',asin:'B07ZZWZG4H'},
-{name:'Camera',price:'$699',img:'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80',asin:'B08DP4NKGN'},
-{name:'Tablet',price:'$329',img:'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80',asin:'B08KTZ8249'},
-{name:'Portable SSD',price:'$159',img:'https://images.unsplash.com/photo-1580894894513-541e068a3e2b?auto=format&fit=crop&w=800&q=80',asin:'B07VJYZFZV'},
-{name:'Keyboard',price:'$129',img:'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80',asin:'B07FPM39S3'},
-{name:'Fitness Band',price:'$79',img:'https://images.unsplash.com/photo-1576243345690-4e4b79b63288?auto=format&fit=crop&w=800&q=80',asin:'B07TYQ4FZ3'}
+// 🔥 REPLACE WITH YOUR REAL AMAZON TAG (example: yourname-20)
+const affiliateTag = "YOURTAG-20";
+
+// 🌍 Auto Detect User Country & Redirect
+function getAmazonDomain() {
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang.includes("IN")) return "amazon.in";
+    if (userLang.includes("GB")) return "amazon.co.uk";
+    if (userLang.includes("AE")) return "amazon.ae";
+    if (userLang.includes("CA")) return "amazon.ca";
+    return "amazon.com"; // default US
+}
+
+const domain = getAmazonDomain();
+
+// ✅ REAL ASIN PRODUCTS (Replace anytime)
+const products = [
+    {name:"Apple MacBook Air M2", price:"Check Price", img:"https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80", asin:"B0B3C2B5V3"},
+    {name:"Sony WH-1000XM5", price:"Check Price", img:"https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?auto=format&fit=crop&w=800&q=80", asin:"B09XS7JWHH"},
+    {name:"Samsung Galaxy Tab", price:"Check Price", img:"https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=800&q=80", asin:"B09N41YVJZ"},
+    {name:"Logitech MX Master 3", price:"Check Price", img:"https://images.unsplash.com/photo-1587202372775-9891a3d6f26a?auto=format&fit=crop&w=800&q=80", asin:"B07S395RWD"}
 ];
 
-const grid=document.getElementById('productGrid');
-products.forEach(p=>{
-let link=`https://www.amazon.com/dp/${p.asin}/?tag=${affiliateTag}`;
-let card=document.createElement('div');
-card.className='card';
-card.innerHTML=`<img src="${p.img}"><h3>${p.name}</h3><p>${p.price}</p><button class='btn buy' onclick="window.open('${link}','_blank')">Buy Now</button>`;
-grid.appendChild(card);
+const grid = document.getElementById("productGrid");
+
+products.forEach(p => {
+    let link = `https://${domain}/gp/product/${p.asin}/?tag=${affiliateTag}&linkCode=ogi&th=1`;
+    let card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+        <img src="${p.img}">
+        <h3>${p.name}</h3>
+        <p>${p.price}</p>
+        <button class='btn buy' onclick="window.open('${link}','_blank')">Buy Now</button>
+    `;
+    grid.appendChild(card);
 });
 
-function calcYT(){let v=document.getElementById('ytViews').value;let e=(v/1000)*2;document.getElementById('ytResult').innerText='Estimated: $'+e.toFixed(2)}
-function calcAffiliate(){let s=document.getElementById('sale').value;let r=document.getElementById('rate').value;let c=(s*r)/100;document.getElementById('affResult').innerText='Commission: $'+c.toFixed(2)}
-function genPass(){let chars='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';let pass='';for(let i=0;i<12;i++){pass+=chars.charAt(Math.floor(Math.random()*chars.length))}document.getElementById('passOut').value=pass}
-function generateAIText(){let topic=document.getElementById('aiInput').value;document.getElementById('aiOutput').innerText='AI Generated content about '+topic+'. Connect API for advanced AI.'}
-function sharePage(){let url=window.location.href;window.open('https://wa.me/?text='+encodeURIComponent('Check this earning website: '+url),'_blank')}
+// 📊 Calculators
+function calcYT(){
+    let v = document.getElementById('views').value;
+    let earn = (v/1000)*2;
+    document.getElementById('ytResult').innerText = "Estimated Earnings: $" + earn.toFixed(2);
+}
 
-// Traffic popup reminder
-setTimeout(()=>{document.getElementById('trafficPopup').style.display='block'},5000);
+function calcCommission(){
+    let s = document.getElementById('sale').value;
+    let r = document.getElementById('rate').value;
+    let c = (s*r)/100;
+    document.getElementById('affResult').innerText = "Commission: $" + c.toFixed(2);
+}
+
 </script>
 
 </body>
 </html>
+
+
 
 
